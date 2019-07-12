@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Data Science Freelance for Hire">
+<meta name="keywords" content="data science,machine learning,freelance,blog,software,developer">
+
+<base href="https://teoguso.github.io/">
+
+<title>Matteo Guzzo</title>
+
+<meta name="generator" content="Hugo 0.55.3" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="https://teoguso.github.io/css/main.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">Spark Configurator</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+        PUBLISHED ON JUL 2, 2019 
+      
+      
+      
+      —
+      
+      
+      <a class="meta" href="/categories/big-data">BIG DATA</a>, 
+      
+      <a class="meta" href="/categories/data-engineering">DATA ENGINEERING</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+
+<p><strong>TL;DR:</strong> <em>Spark executors setup is crucial to
+the performance of a Spark cluster.
+Executor parameters can be tuned to
+your hardware configuration in order
+to reach optimal usage.
+I built a
+<a href="sparkconf.mgbox.me">small web app</a>
+that allows you
+to do just that.</em></p>
+
+<!-- main body -->
+
+<h2 id="spark-executors">Spark executors</h2>
+
+<p>Spark jobs make use of <em>Executors</em>,
+which are task-running applications,
+themselves running on
+a node of the cluster.
+Spark jobs are subdivided in tasks that are
+distributed to the executors according to the
+type of operations and the underlying
+structure of the data.</p>
+
+<p>Executors have the ability to run multiple tasks
+simultaneously and use any amount of physical RAM
+available in a single node.
+One executor can only run on a single node
+(usually a single machine or VM).
+The main configuration is determined by a set
+of parameters, as it follows:</p>
+
+<ul>
+<li><code>spark.executors.instances</code> defines the total
+number of executors that
+is available for Spark;</li>
+<li><code>spark.executors.cores</code> defines how many CPUs
+each executor is allowed to use.
+This directly impacts their multi-tasking
+ability;</li>
+<li><code>spark.executors.memory</code> defines how much RAM
+each executor can use.</li>
+</ul>
+
+<p>This is equivalent to using the <code>spark-submit</code>
+tool and specifying the parameters on the
+command line:</p>
+
+<pre><code class="language-bash">spark-submit --class &lt;CLASS_NAME&gt; \
+ --num-executors ? \
+ --executor-cores ? \
+ --executor-memory ? [...]
+</code></pre>
+
+<p>These parameters are all &mdash; theoretically &mdash; bound to the capacity
+of the hardware running Spark,
+or that the user is willing to use
+(the user might want/have to use less than
+full capacity).
+In practice one could try and use more resources
+than available, even though this would lead
+to errors as soon as the YARN resource
+manager tries to
+access the non-existing resource
+(e.g. out-of-memory errors).<br />
+Ideally one would have
+a few cores per executors to allow
+parallel processing of tasks.
+Interestingly, there is a best-case
+scenario of five cores per executors
+beyond which one starts hitting
+diminishing returns
+(as thoroughly described by
+<a href="https://www.cloudera.com/documentation/enterprise/5-8-x/topics/admin_spark_tuning.html">Cloudera</a>
+).</p>
+
+<h2 id="the-parameter-fitting-conundrum">The parameter-fitting conundrum</h2>
+
+<p>So how does one find the best combination of
+parameters?
+More executors is usually better (one can
+perform more tasks in parallel)
+but more memory is also better
+(which forces to have less executors).
+One would also like to use more then one
+core per executor (ideally five, but not more
+than that).
+More cores per executor means less executors
+overall, but same task-processing ability
+due to multitasking.</p>
+
+<h3 id="a-prescription-for-fixing-parameters">A prescription for fixing parameters</h3>
+
+<p><a href="https://spoddutur.github.io/spark-notes/distribution_of_executors_cores_and_memory_for_spark_application.html">This post</a>
+explains in detail how one can configure our
+parameters of interest, using a practical
+example and
+discussing <em>tiny</em> vs <em>fat</em> executors.</p>
+
+<blockquote>
+<p><strong>Tiny vs Fat:</strong>
+with <em>tiny executors</em> one refers to having
+only one core per executor, which means
+having as many executors per node as
+available cores.<br />
+<em>Fat executors</em> use all the cores on a single
+node so that there is only one executor
+per cluster node.</p>
+</blockquote>
+
+<h4 id="spark-conf-procedure">Step-by-step procedure</h4>
+
+<p>Here are the main steps for configuring
+the parameters on a Spark cluster
+given the number of cluster nodes,
+the number of cores per node, and the
+amount of RAM per node:</p>
+
+<ol>
+<li>Reserve one core per node for
+YARN/Hadoop daemons;</li>
+<li>Use remaining cores to count total available
+cores in the cluster;</li>
+<li>Set <code>spark.executor.cores=5</code>;</li>
+<li>Divide total available cores by
+<code>spark.executor.cores</code>
+to find the total
+number of executors on the cluster;</li>
+<li>Reserve one executor for the application
+manager (reduce the number of executors
+by one).
+Use the resulting value to set
+<code>spark.executor.instances</code>;</li>
+<li>Calculate number of executors per node
+dividing the number of executors by the
+number of nodes in the cluster
+(rounding down to the nearest integer);</li>
+<li>Calculate memory per executor dividing
+total node RAM by executors per node;</li>
+<li>Reduce  by 7% executor memory to
+account for heap overhead for YARN/Hadoop;
+Use resulting number as
+<code>spark.executor.memory</code>;</li>
+</ol>
+
+<p>The aforementioned post optimizes the
+configuration for a specific example
+(16 cores/node, 64GB RAM/node).
+However, using this approach for different
+hardware configuration would yield to
+unused cores in each node.</p>
+
+<p>For example, in case there were 8 cores per
+node, using 5 executor cores would yield
+to 2 wasted cores per node, as only one
+executor per node would fit.
+One solution would be to set
+<code>spark.executor.cores=3</code> so that only one
+core is wasted.
+In general the only solutions that never
+leave any core unused are having either
+tiny executors or fat executors, but both
+options have drawbacks, as already mentioned.</p>
+
+<p>The goal here is to have a general solution
+that can adapt and work for any
+hardware configuration and waste as little
+resources as possible</p>
+
+<h2 id="an-automated-solution">An automated solution</h2>
+
+<p>Solving this problem comes down to finding
+the best number of cores per executor given
+the underlying hardware.
+Once that is set, the
+<a href="/blog/spark-configurator/#spark-conf-procedure">previously listed procedure</a>
+works perfectly well as is.</p>
+
+<p>I have implemented the whole procedure
+in a small web application based on Flask,
+<a href="sparkconf.mgbox.me">which you can find here</a>.
+Here I will briefly describe the algorithm
+used to find a best-fit <code>spark.executor.cores</code></p>
+
+<h3 id="the-algorithm">The algorithm</h3>
+
+<p>This function written in Python finds
+a suitable value for <code>spark.executor.cores</code>:</p>
+
+<pre><code class="language-python">def calc_executor_cores(available_cores):
+    executor_cores_max = 5
+    if available_cores &gt;= executor_cores_max:
+        executor_cores = min(executor_cores_max, available_cores // 2)
+    else:
+        executor_cores = max(1, available_cores // 2)
+    remainder_cores = available_cores % executor_cores
+    while remainder_cores &gt; 1 and executor_cores &gt; 2:
+        executor_cores -= 1
+        remainder_cores = available_cores % executor_cores
+    return executor_cores
+</code></pre>
+
+<p>The function takes the number of available cores
+per node (after removing the YARN node)
+as an input and returns the calculated
+value for <code>executor_cores</code>.
+Its main steps are:</p>
+
+<ul>
+<li>initialize <code>executor_cores</code> to a number
+that can fit the available cores;</li>
+<li>start reducing it by one unit it until there
+are no unused cores or
+<code>executor_cores=2</code>;</li>
+<li>return the resulting <code>executor_cores</code>.</li>
+</ul>
+
+<p>In short, the best-case scenario is
+that one has all the cores used with
+<code>executor_cores=5</code>, while the
+worst-case scenario is that one has
+<code>executor_cores=2</code> <strong>and</strong> one unused core.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This is not a very hard problem, it&rsquo;s just
+very tedious.
+My hope is that people can
+<a href="sparkconf.mgbox.me">use my app</a>
+and find it useful, and
+not have to worry about their Spark
+configuration ever again.</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+      
+      
+      TAGS:
+      
+      
+      <a class="meta" href="/tags/flask">FLASK</a>, 
+      
+      <a class="meta" href="/tags/python">PYTHON</a>, 
+      
+      <a class="meta" href="/tags/spark">SPARK</a>, 
+      
+      <a class="meta" href="/tags/yarn">YARN</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "matteoguzzo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://teoguso.github.io/">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+  <h6 class="text-center copyright">© 2019 Matteo Guzzo. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
+  
+  
+</footer>
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+
+<script type="text/javascript">
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+

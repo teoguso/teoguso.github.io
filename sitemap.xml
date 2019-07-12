@@ -3,24 +3,73 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://teoguso.github.io/about/</loc>
-    <lastmod>2019-04-21T22:39:50+02:00</lastmod>
+    <loc>https://teoguso.github.io/categories/big-data/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://teoguso.github.io/</loc>
-    <lastmod>2019-04-21T22:39:50+02:00</lastmod>
+    <loc>https://teoguso.github.io/blog/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://teoguso.github.io/categories/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://teoguso.github.io/tags/</loc>
+    <loc>https://teoguso.github.io/categories/data-engineering/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/flask/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/python/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/spark/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/blog/spark-configurator/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/yarn/</loc>
+    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/about/</loc>
+    <lastmod>2019-04-21T22:39:50+02:00</lastmod>
   </url>
   
 </urlset>

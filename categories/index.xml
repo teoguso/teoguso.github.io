@@ -6,9 +6,28 @@
     <description>Recent content in Categories on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Tue, 02 Jul 2019 17:09:50 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Big Data</title>
+      <link>https://teoguso.github.io/categories/big-data/</link>
+      <pubDate>Tue, 02 Jul 2019 17:09:50 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/categories/big-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Engineering</title>
+      <link>https://teoguso.github.io/categories/data-engineering/</link>
+      <pubDate>Tue, 02 Jul 2019 17:09:50 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/categories/data-engineering/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

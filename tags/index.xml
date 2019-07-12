@@ -6,9 +6,46 @@
     <description>Recent content in Tags on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
+    <lastBuildDate>Tue, 02 Jul 2019 17:09:50 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Flask</title>
+      <link>https://teoguso.github.io/tags/flask/</link>
+      <pubDate>Tue, 02 Jul 2019 17:09:50 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/flask/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://teoguso.github.io/tags/python/</link>
+      <pubDate>Tue, 02 Jul 2019 17:09:50 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spark</title>
+      <link>https://teoguso.github.io/tags/spark/</link>
+      <pubDate>Tue, 02 Jul 2019 17:09:50 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/spark/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>YARN</title>
+      <link>https://teoguso.github.io/tags/yarn/</link>
+      <pubDate>Tue, 02 Jul 2019 17:09:50 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/yarn/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>
