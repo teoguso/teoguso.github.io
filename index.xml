@@ -22,12 +22,14 @@ Spark executors Spark jobs make use of Executors, which are task-running applica
     </item>
     
     <item>
-      <title>About</title>
+      <title>About Me</title>
       <link>https://teoguso.github.io/about/</link>
       <pubDate>Sun, 21 Apr 2019 22:39:50 +0200</pubDate>
       
       <guid>https://teoguso.github.io/about/</guid>
-      <description>Coming soon!</description>
+      <description>Hi!
+I&amp;rsquo;m Matteo. A Physicist by training, I have studied in Italy and France and obtained my PhD at the Ecole Polytechnique in Paris, in the field of theoretical solid-state Physics. I started a promising career in academia but soon realised I needed to do something different for a living.
+After searching a bit for the next best thing, I turned my attention to the field of AI and started working as a freelance Data Scientist.</description>
     </item>
     
   </channel>
