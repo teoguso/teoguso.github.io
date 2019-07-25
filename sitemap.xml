@@ -3,13 +3,24 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://teoguso.github.io/categories/big-data/</loc>
-    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <loc>https://teoguso.github.io/blog/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://teoguso.github.io/blog/</loc>
+    <loc>https://teoguso.github.io/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/blog/paste-onto-vim-from-clipboard/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/categories/big-data/</loc>
     <lastmod>2019-07-02T17:09:50+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -35,12 +46,6 @@
   <url>
     <loc>https://teoguso.github.io/blog/spark-configurator/</loc>
     <lastmod>2019-07-02T17:09:50+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://teoguso.github.io/</loc>
-    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

@@ -6,10 +6,20 @@
     <description>Recent content in Blogs on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 02 Jul 2019 17:09:50 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 15:50:57 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Paste to Vim from the System Clipboard</title>
+      <link>https://teoguso.github.io/blog/paste-onto-vim-from-clipboard/</link>
+      <pubDate>Thu, 11 Jul 2019 15:50:57 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/blog/paste-onto-vim-from-clipboard/</guid>
+      <description>Ever tried to paste something you just copied from your browser or from anywhere else on your system onto vim? As long as you still have a mouse with a middle button, all is well, but what happens when you are on a laptop or are using a smart mouse of some sort? Depending on your system configuration that could become a very challenging task.
+This article explains the issues and solutions to this in great detail.</description>
+    </item>
     
     <item>
       <title>How to Optimize your Spark Jobs</title>
