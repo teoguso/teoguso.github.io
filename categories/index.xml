@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 02 Jul 2019 17:09:50 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 15:50:57 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Productivity</title>
+      <link>https://teoguso.github.io/categories/productivity/</link>
+      <pubDate>Thu, 11 Jul 2019 15:50:57 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/categories/productivity/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Quick Tips</title>
+      <link>https://teoguso.github.io/categories/quick-tips/</link>
+      <pubDate>Thu, 11 Jul 2019 15:50:57 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/categories/quick-tips/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Big Data</title>

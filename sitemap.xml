@@ -9,6 +9,18 @@
   </url>
   
   <url>
+    <loc>https://teoguso.github.io/categories/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/laptop/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://teoguso.github.io/</loc>
     <lastmod>2019-07-11T15:50:57+02:00</lastmod>
     <priority>0</priority>
@@ -20,13 +32,31 @@
   </url>
   
   <url>
-    <loc>https://teoguso.github.io/categories/big-data/</loc>
-    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
+    <loc>https://teoguso.github.io/categories/productivity/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://teoguso.github.io/categories/</loc>
+    <loc>https://teoguso.github.io/categories/quick-tips/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/vim/</loc>
+    <lastmod>2019-07-11T15:50:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/categories/big-data/</loc>
     <lastmod>2019-07-02T17:09:50+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -56,12 +86,6 @@
   
   <url>
     <loc>https://teoguso.github.io/tags/spark/</loc>
-    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://teoguso.github.io/tags/</loc>
     <lastmod>2019-07-02T17:09:50+02:00</lastmod>
     <priority>0</priority>
   </url>

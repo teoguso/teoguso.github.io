@@ -6,10 +6,28 @@
     <description>Recent content in Tags on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 02 Jul 2019 17:09:50 +0200</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 15:50:57 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Laptop</title>
+      <link>https://teoguso.github.io/tags/laptop/</link>
+      <pubDate>Thu, 11 Jul 2019 15:50:57 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/laptop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://teoguso.github.io/tags/vim/</link>
+      <pubDate>Thu, 11 Jul 2019 15:50:57 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Flask</title>
