@@ -6,10 +6,28 @@
     <description>Recent content in Categories on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Thu, 11 Jul 2019 15:50:57 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 31 Jul 2019 16:11:31 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Web Apps</title>
+      <link>https://teoguso.github.io/categories/web-apps/</link>
+      <pubDate>Wed, 31 Jul 2019 16:11:31 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/categories/web-apps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Hosting</title>
+      <link>https://teoguso.github.io/categories/web-hosting/</link>
+      <pubDate>Wed, 31 Jul 2019 16:11:31 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/categories/web-hosting/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Productivity</title>

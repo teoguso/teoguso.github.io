@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="description" content="Freelance Data Scientist">
+<meta name="keywords" content="data science,machine learning,freelance,blog,software,developer">
+
+<base href="https://teoguso.github.io/">
+
+<title>Matteo Guzzo</title>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,400|Roboto+Slab:400,700|Roboto:300,300i,400,400i,500,500i,700,700i">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+<link rel="stylesheet" href="https://teoguso.github.io/css/main.css">
+
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+
+</head>
+<body lang="en-US">
+<div class="container">
+
+
+<header class="row text-left title">
+  <h1 class="title">Enable SSL/TLS with Let&#39;s Encrypt and Dokku</h1>
+</header>
+<section id="category-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-left meta">
+        PUBLISHED ON JUL 31, 2019 
+      
+      
+      
+      —
+      
+      
+      <a class="meta" href="/categories/web-apps">WEB APPS</a>, 
+      
+      <a class="meta" href="/categories/web-hosting">WEB HOSTING</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+<section id="content-pane" class="row">
+  <div class="col-md-12 text-justify content">
+    
+
+<h3 id="connecting-securely-on-the-web">Connecting Securely on the Web</h3>
+
+<p>The <a href="https://en.wikipedia.org/wiki/HTTPS"><em>HTTPS protocol</em></a>
+allows one to connect
+to websites and web applications in a secure way.
+The absence of this <em>de-facto</em> standard usually triggers
+a big red warning on modern browsers.
+This means that using <em>HTTPS</em> is nowadays a <em>must</em>
+when creating web pages and web applications that
+face external users.</p>
+
+<p>In practice, it is not straightforward to setup servers
+so that they use this secure protocol.
+This requires acquiring and installing <em>trusted certificates</em>
+on the servers hosting the application,
+which requires a certain knowledge
+of the inner working of web servers and web protocols.</p>
+
+<p>Web-hosting providers have managed solutions for this, which
+of course all come at a price.
+This is great for commercial products but not an option
+when dealing with personal projects or experiments that
+don&rsquo;t really produce any value.</p>
+
+<p>I&rsquo;d like to describe two tools that make this problem
+super-accessible and easy.
+These are <a href="http://dokku.viewdocs.io/dokku~v0.17.9/">Dokku</a>
+and <a href="https://github.com/dokku/dokku-letsencrypt">dokku-letsencrypt</a>.</p>
+
+<h3 id="dokku">Dokku</h3>
+
+<p>If you haven&rsquo;t heard about Dokku yet, expect to hear
+about it sometime in the future.
+Dokku is an open-source platform-as-a-service (PaaS) implementation
+that makes hosting web application really easy.
+Think Heroku that you can install wherever you want and use
+for free (as long as you own the hardware).<br />
+Dokku supports a number of languages (all languages supported by
+<a href="https://github.com/gliderlabs/herokuish">Herokuish</a>) and, more importantly,
+it supports deployment through a
+<a href="https://docs.docker.com/engine/reference/builder/"><em>Dockerfile</em></a>,
+further expanding the array of possibilities for your deployment.</p>
+
+<p>In practice Dokku can host any app that can be put
+in a Docker container.</p>
+
+<h3 id="let-s-encrypt">Let&rsquo;s Encrypt</h3>
+
+<p><a href="https://en.wikipedia.org/wiki/Let%27s_Encrypt">Let&rsquo;s Encrypt</a>
+provides free and trusted SSL/TLS certificates
+that people can use for their websites.</p>
+
+<p><a href="https://github.com/dokku/dokku-letsencrypt">dokku-letsencrypt</a>
+is a Dokku plugin that allows one to automatically
+acquire and install certificates produced by <em>Let&rsquo;s Encrypt</em>.
+The plugin takes care of setting up the web server and
+makes the installation of the certificates seamless.</p>
+
+<p><a href="https://blog.semicolonsoftware.de/securing-dokku-with-lets-encrypt-tls-certificates/">The original post</a>
+by <a href="https://twitter.com/sseemayer">Stefan Seemayer</a>
+as well as the plugin&rsquo;s repository&rsquo;s README outline this
+incredibly simple procedure.</p>
+
+<h3 id="a-matter-of-two-commands">A Matter of two commands</h3>
+
+<p>The plugin can be installed with this command:</p>
+
+<pre><code class="language-bash">sudo dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
+</code></pre>
+
+<p>If the app named <em>myapp</em> is running on a Dokku installation,
+one can install the certificate for the app as follows.
+First one should set an email address for the certificate:</p>
+
+<pre><code class="language-bash">dokku config:set --no-restart myapp DOKKU_LETSENCRYPT_EMAIL=your@email.tld
+</code></pre>
+
+<p>then the certificate can be installed and the app automatically set up
+with</p>
+
+<pre><code class="language-bash">dokku letsencrypt myapp
+</code></pre>
+
+<p>Once this step is successful, the website is reachable via HTTPS
+and HTTP requests get automatically redirected</p>
+
+<p>One can test the state of the installed certificates with
+the command</p>
+
+<pre><code class="language-bash">dokku letsencrypt:ls
+</code></pre>
+
+<p>The plugin can also set up the automatic renewal of the app&rsquo;s
+certificate (yes, because they expire! I forgot to mention that!)</p>
+
+<p>I am blown away by how much Dokku can improve one&rsquo;s quality of life
+with little things like this.
+It&rsquo;s possibly the easiest solution I have seen for self-hosting or self-managing
+web applications.</p>
+
+  </div>
+</section>
+<section id="tag-pane" class="row meta">
+  
+  <div class="col-md-12">
+    <h6 class="text-right meta">
+      
+      
+      
+      TAGS:
+      
+      
+      <a class="meta" href="/tags/docker">DOCKER</a>, 
+      
+      <a class="meta" href="/tags/dokku">DOKKU</a>, 
+      
+      <a class="meta" href="/tags/encryption">ENCRYPTION</a>, 
+      
+      <a class="meta" href="/tags/plugin">PLUGIN</a>, 
+      
+      <a class="meta" href="/tags/ssl">SSL</a>, 
+      
+      <a class="meta" href="/tags/tls">TLS</a>
+      
+      
+      
+    </h6>
+  </div>
+  
+</section>
+
+
+
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "matteoguzzo" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+<section id="menu-pane" class="row menu text-center">
+  
+  
+  <span><a class="menu-item" href="https://teoguso.github.io/blog/paste-onto-vim-from-clipboard/">&lt; prev | </a></span>
+  
+  
+  <span><a class="menu-item" href="/blog">blog</a></span>
+  
+  
+  
+  <h4 class="text-center"><a class="menu-item" href="https://teoguso.github.io/">home</a></h4>
+</section>
+
+
+
+<footer class="row text-center footer">
+  <hr />
+  
+  <h6 class="text-center copyright">© 2019 Matteo Guzzo. <a href="http://creativecommons.org/licenses/by/3.0/">Some Rights Reserved</a>.</h6>
+  
+  <h6 class="text-center powered">Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/shenoybr/hugo-goa">Goa</a>.</h6>
+  
+  
+</footer>
+
+</div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  
+
+<script type="text/javascript">
+hljs.initHighlightingOnLoad();
+</script>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+
+
