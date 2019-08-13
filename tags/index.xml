@@ -6,10 +6,64 @@
     <description>Recent content in Tags on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Wed, 31 Jul 2019 16:11:31 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 11:02:41 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gapminder</title>
+      <link>https://teoguso.github.io/tags/gapminder/</link>
+      <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/gapminder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HTML</title>
+      <link>https://teoguso.github.io/tags/html/</link>
+      <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Interactive</title>
+      <link>https://teoguso.github.io/tags/interactive/</link>
+      <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/interactive/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plotly</title>
+      <link>https://teoguso.github.io/tags/plotly/</link>
+      <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/plotly/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://teoguso.github.io/tags/python/</link>
+      <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>https://teoguso.github.io/tags/visualization/</link>
+      <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/tags/visualization/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Docker</title>
@@ -89,15 +143,6 @@
       <pubDate>Tue, 02 Jul 2019 17:09:50 +0200</pubDate>
       
       <guid>https://teoguso.github.io/tags/flask/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://teoguso.github.io/tags/python/</link>
-      <pubDate>Tue, 02 Jul 2019 17:09:50 +0200</pubDate>
-      
-      <guid>https://teoguso.github.io/tags/python/</guid>
       <description></description>
     </item>
     

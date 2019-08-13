@@ -6,10 +6,20 @@
     <description>Recent content in Python on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 02 Jul 2019 17:09:50 +0200</lastBuildDate>
+    <lastBuildDate>Sat, 03 Aug 2019 11:02:41 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Embed interactive plots in static web pages with Plotly</title>
+      <link>https://teoguso.github.io/blog/test-plotly-embed/</link>
+      <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/blog/test-plotly-embed/</guid>
+      <description>Using graphs when writing web content Inserting images into article is something I have been battling with since my university days, when getting it right with LaTex was the ultimate challenge.
+These days things have gotten much better, thanks to the use of formats like MarkDown or RestructuredText. These make it quite straightforward to include a JPG or PNG image in a document for the web (and can be used to produce PDF documents as well).</description>
+    </item>
     
     <item>
       <title>How to Optimize your Spark Jobs</title>

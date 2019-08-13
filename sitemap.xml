@@ -3,14 +3,79 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://teoguso.github.io/categories/blogging/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://teoguso.github.io/blog/</loc>
-    <lastmod>2019-07-31T16:11:31+02:00</lastmod>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://teoguso.github.io/categories/</loc>
-    <lastmod>2019-07-31T16:11:31+02:00</lastmod>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/categories/data-visualisation/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/blog/test-plotly-embed/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/gapminder/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/html/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/interactive/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/plotly/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/python/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/tags/visualization/</loc>
+    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -38,12 +103,6 @@
   </url>
   
   <url>
-    <loc>https://teoguso.github.io/</loc>
-    <lastmod>2019-07-31T16:11:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://teoguso.github.io/tags/plugin/</loc>
     <lastmod>2019-07-31T16:11:31+02:00</lastmod>
     <priority>0</priority>
@@ -57,12 +116,6 @@
   
   <url>
     <loc>https://teoguso.github.io/tags/tls/</loc>
-    <lastmod>2019-07-31T16:11:31+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://teoguso.github.io/tags/</loc>
     <lastmod>2019-07-31T16:11:31+02:00</lastmod>
     <priority>0</priority>
   </url>
@@ -129,12 +182,6 @@
   <url>
     <loc>https://teoguso.github.io/blog/spark-configurator/</loc>
     <lastmod>2019-07-02T17:09:50+02:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://teoguso.github.io/tags/python/</loc>
-    <lastmod>2019-07-02T17:09:50+02:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

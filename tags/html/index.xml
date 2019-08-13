@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML on Matteo Guzzo</title>
+    <link>https://teoguso.github.io/tags/html/</link>
+    <description>Recent content in HTML on Matteo Guzzo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Sat, 03 Aug 2019 11:02:41 +0200</lastBuildDate>
+    
+	<atom:link href="https://teoguso.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Embed interactive plots in static web pages with Plotly</title>
+      <link>https://teoguso.github.io/blog/test-plotly-embed/</link>
+      <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/blog/test-plotly-embed/</guid>
+      <description>Using graphs when writing web content Inserting images into article is something I have been battling with since my university days, when getting it right with LaTex was the ultimate challenge.
+These days things have gotten much better, thanks to the use of formats like MarkDown or RestructuredText. These make it quite straightforward to include a JPG or PNG image in a document for the web (and can be used to produce PDF documents as well).</description>
+    </item>
+    
+  </channel>
+</rss>
