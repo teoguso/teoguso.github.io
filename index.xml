@@ -13,11 +13,11 @@
     
     <item>
       <title>Embed interactive plots in static web pages with Plotly</title>
-      <link>https://teoguso.github.io/blog/embed-html-graphs-plotly/</link>
+      <link>https://teoguso.github.io/blog/test-plotly-embed/</link>
       <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
       
-      <guid>https://teoguso.github.io/blog/embed-html-graphs-plotly/</guid>
-      <description>Using graphs when writing web content Inserting images into articles is something I have been battling with since my university days, when getting it right with LaTex was the ultimate challenge.
+      <guid>https://teoguso.github.io/blog/test-plotly-embed/</guid>
+      <description>Using graphs when writing web content Inserting images into article is something I have been battling with since my university days, when getting it right with LaTex was the ultimate challenge.
 These days things have gotten much better, thanks to the use of formats like MarkDown or RestructuredText. These make it quite straightforward to include a JPG or PNG image in a document for the web (and can be used to produce PDF documents as well).</description>
     </item>
     
@@ -57,9 +57,10 @@ Spark executors Spark jobs make use of Executors, which are task-running applica
       <pubDate>Sun, 21 Apr 2019 22:39:50 +0200</pubDate>
       
       <guid>https://teoguso.github.io/about/</guid>
-      <description>Hi!
-I&amp;rsquo;m Matteo. A Physicist by training, I have studied in Italy and France and obtained my PhD at the Ecole Polytechnique in France, in the field of theoretical solid-state Physics. I started a promising career in academia but soon realized I needed to do something different for a living.
-After a bit of soul-searching, I turned my attention to the field of AI and started working as a freelance Data Scientist.</description>
+      <description>Hi,
+I&amp;rsquo;m Matteo. I help companies solve their data problems and expand their possibilities by connecting business, data, and people. I have a passion for bridging the gap between people and technology while solving interesting &amp;mdash; and possibly hard &amp;mdash; problems.
+I crave learning and sharing knowledge. I have attended and spoken at numerous conferences and events, e.g. most recently EuroPython and Berlin Python Pizza.
+A Physicist by training, I have studied in Italy and France and obtained my PhD at the Ecole Polytechnique in France, in the field of theoretical solid-state Physics.</description>
     </item>
     
   </channel>
