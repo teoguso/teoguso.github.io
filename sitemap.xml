@@ -3,6 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://teoguso.github.io/</loc>
+    <lastmod>2019-09-16T10:39:57+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://teoguso.github.io/projects/</loc>
+    <lastmod>2019-09-16T10:39:57+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://teoguso.github.io/categories/blogging/</loc>
     <lastmod>2019-08-03T11:02:41+02:00</lastmod>
     <priority>0</priority>
@@ -27,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://teoguso.github.io/blog/test-plotly-embed/</loc>
+    <loc>https://teoguso.github.io/blog/embed-html-graphs-plotly/</loc>
     <lastmod>2019-08-03T11:02:41+02:00</lastmod>
   </url>
   
@@ -45,12 +56,6 @@
   
   <url>
     <loc>https://teoguso.github.io/tags/interactive/</loc>
-    <lastmod>2019-08-03T11:02:41+02:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://teoguso.github.io/</loc>
     <lastmod>2019-08-03T11:02:41+02:00</lastmod>
     <priority>0</priority>
   </url>

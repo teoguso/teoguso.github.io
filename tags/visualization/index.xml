@@ -13,11 +13,11 @@
     
     <item>
       <title>Embed interactive plots in static web pages with Plotly</title>
-      <link>https://teoguso.github.io/blog/test-plotly-embed/</link>
+      <link>https://teoguso.github.io/blog/embed-html-graphs-plotly/</link>
       <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
       
-      <guid>https://teoguso.github.io/blog/test-plotly-embed/</guid>
-      <description>Using graphs when writing web content Inserting images into article is something I have been battling with since my university days, when getting it right with LaTex was the ultimate challenge.
+      <guid>https://teoguso.github.io/blog/embed-html-graphs-plotly/</guid>
+      <description>Using graphs when writing web content Inserting images into articles is something I have been battling with since my university days, when getting it right with LaTex was the ultimate challenge.
 These days things have gotten much better, thanks to the use of formats like MarkDown or RestructuredText. These make it quite straightforward to include a JPG or PNG image in a document for the web (and can be used to produce PDF documents as well).</description>
     </item>
     

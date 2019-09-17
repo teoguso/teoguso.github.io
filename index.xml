@@ -6,18 +6,30 @@
     <description>Recent content on Matteo Guzzo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 03 Aug 2019 11:02:41 +0200</lastBuildDate>
+    <lastBuildDate>Mon, 16 Sep 2019 10:39:57 +0200</lastBuildDate>
     
 	<atom:link href="https://teoguso.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>Personal Projects</title>
+      <link>https://teoguso.github.io/projects/</link>
+      <pubDate>Mon, 16 Sep 2019 10:39:57 +0200</pubDate>
+      
+      <guid>https://teoguso.github.io/projects/</guid>
+      <description>A list of projects and demos I have built inspired by real-world problem or for personal leisure and learning.
+Spark Configurator https://sparkconf.mgbox.me After working with Spark for a while, I realized nobody had an easy-to-grab tool to set up a Spark cluster with an optimal configuration.
+This is my attempt at making that tool.
+Twitch-viz https://twitch-viz.mgbox.me A an analytics dashboard of the streaming platform https://twitch.tv using the official API.</description>
+    </item>
+    
+    <item>
       <title>Embed interactive plots in static web pages with Plotly</title>
-      <link>https://teoguso.github.io/blog/test-plotly-embed/</link>
+      <link>https://teoguso.github.io/blog/embed-html-graphs-plotly/</link>
       <pubDate>Sat, 03 Aug 2019 11:02:41 +0200</pubDate>
       
-      <guid>https://teoguso.github.io/blog/test-plotly-embed/</guid>
-      <description>Using graphs when writing web content Inserting images into article is something I have been battling with since my university days, when getting it right with LaTex was the ultimate challenge.
+      <guid>https://teoguso.github.io/blog/embed-html-graphs-plotly/</guid>
+      <description>Using graphs when writing web content Inserting images into articles is something I have been battling with since my university days, when getting it right with LaTex was the ultimate challenge.
 These days things have gotten much better, thanks to the use of formats like MarkDown or RestructuredText. These make it quite straightforward to include a JPG or PNG image in a document for the web (and can be used to produce PDF documents as well).</description>
     </item>
     
